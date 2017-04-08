@@ -1,0 +1,26 @@
+{
+  "name": "game-square",
+  "version": "1.0.0",
+  "description": "Sample Game Review App",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobBJohnson/game-square.git"
+  },
+  "keywords": [
+    "angular",
+    "2",
+    "ng2",
+    "webpack",
+    "node"
+  ],
+  "author": "Jacob Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobBJohnson/game-square/issues"
+  },
+  "homepage": "https://github.com/JacobBJohnson/game-square#readme"
+}
