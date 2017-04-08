@@ -1,11 +1,9 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const helpers = require('./webpack.helpers');
 
-
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var helpers = require('./webpack.helpers');
-
-var autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css",
