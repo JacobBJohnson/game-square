@@ -1,10 +1,11 @@
 {
   "name": "game-square",
   "version": "1.0.0",
-  "description": "Sample Game Review App",
-  "main": "index.js",
+  "description": "Sample Game Review App",  
   "scripts": {
-    "test": "karma start"
+    "start": "webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js",
+    "test": "karma start",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,53 @@
   "bugs": {
     "url": "https://github.com/JacobBJohnson/game-square/issues"
   },
-  "homepage": "https://github.com/JacobBJohnson/game-square#readme"
+  "homepage": "https://github.com/JacobBJohnson/game-square#readme",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.43",
+    "@types/jquery": "^2.0.40",
+    "@types/node": "^7.0.5",
+    "angular2-template-loader": "^0.6.0",
+    "autoprefixer": "^6.7.3",
+    "awesome-typescript-loader": "^3.0.4",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.9.0",
+    "font-awesome": "^4.7.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.16.1",
+    "jasmine-core": "^2.4.1",
+    "jquery": "^3.1.1",
+    "karma": "^1.2.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.1",
+    "node-sass": "^4.5.0",
+    "null-loader": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.7",
+    "postcss-loader": "^1.3.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^6.0.1",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.2.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0",
+    "webpack-merge": "^2.4.0"
+  }
 }
