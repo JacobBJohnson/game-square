@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-require('./styles/game-square.scss');
+require('./styles/game-square/game-square.scss');
 require('font-awesome/css/font-awesome.css');
 
 @Component({
@@ -8,8 +8,17 @@ require('font-awesome/css/font-awesome.css');
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
+  fullSearch: boolean = false;
   
   constructor() { }
+
+  onFullSearchMode() {
+    this.fullSearch = true;
+  };
+
+  onCloseSearchMode() {
+    this.fullSearch = false;
+  };
 
   ngOnInit() {}
 

@@ -88,12 +88,12 @@
 }
 
 .full-search{
-    position: absolute;
+    position: fixed;
     height: 100%;
     width:100%;
     pointer-events:all;
-    background:#000;
-    opacity: .6;
+    background:rgba(33,34,34,.96);
+    color:#888;
     z-index:10001;
     top:0;
     left:0;
@@ -133,6 +133,11 @@
             border-bottom: 3px solid $blue;
             cursor: pointer;
             outline: 0;
+
+            &::placeholder{
+                opacity: 1;
+                color:#fbfcfc;
+            }
         }
         & .fa {
             font-size: 20px;

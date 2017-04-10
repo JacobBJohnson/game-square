@@ -1,1 +1,9 @@
-<gs-header></gs-header>
+<gs-header (onFullSearchMode)="onFullSearchMode()" [searchOpen]="fullSearch"></gs-header>
+
+<gs-full-search *ngIf="fullSearch" [searchOpen]="fullSearch" (onCloseSearchMode)="onCloseSearchMode()"></gs-full-search>
+
+<main>
+    <section class="container">
+<gs-game-list></gs-game-list>
+</section>
+</main>

@@ -3,27 +3,18 @@
   "version": "1.0.0",
   "description": "Sample Game Review App",  
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js",
+    "client": "webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js",
     "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "server": "node server.js",
+    "start": "concurrently \"npm run client\" \"nodemon server.js\""    
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JacobBJohnson/game-square.git"
-  },
-  "keywords": [
-    "angular",
-    "2",
-    "ng2",
-    "webpack",
-    "node"
-  ],
+  },  
   "author": "Jacob Johnson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JacobBJohnson/game-square/issues"
-  },
-  "homepage": "https://github.com/JacobBJohnson/game-square#readme",
+  "license": "MIT",  
   "dependencies": {
     "@angular/common": "~2.4.0",
     "@angular/compiler": "~2.4.0",
@@ -33,7 +24,13 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
+    "body-parser": "^1.16.1",
+    "cors": "^2.8.1",    
     "core-js": "^2.4.1",
+    "express": "~4.14.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.8.3",
+    "morgan": "^1.8.1",
     "rxjs": "5.0.1",
     "zone.js": "^0.7.4"
   },
@@ -45,6 +42,7 @@
     "autoprefixer": "^6.7.3",
     "awesome-typescript-loader": "^3.0.4",
     "bootstrap": "^3.3.7",
+    "concurrently": "3.4.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.9.0",

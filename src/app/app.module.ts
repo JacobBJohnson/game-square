@@ -4,17 +4,24 @@ import {Http, Response,Headers, RequestOptions, HttpModule} from '@angular/http'
 import { AppComponent } from './app.component';
 
 import {HeaderComponent} from './components/header/header.component';
-//import {KoiFullSearchComponent} from './components/full-search/koi-full-search.component';
+import {GameListComponent} from './components/game-list/game-list.component';
+import {FullSearchComponent} from './components/full-search/full-search.component';
 
-//import {AppDataService} from './services/app.service';
+import {GameService} from './services/game.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule
   ],
-  declarations: [AppComponent,HeaderComponent],
-  providers:[],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FullSearchComponent,
+    GameListComponent],
+  providers:[
+    GameService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

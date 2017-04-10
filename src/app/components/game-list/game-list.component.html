@@ -1,0 +1,12 @@
+<div class="game-list-container">
+    <section *ngFor="let game of games; let i=index">
+        <div class="logo">
+            <img [src]="game.cover?.url" width="120" height="120" [alt]="game.name">
+        </div>
+        <div class="game-info">
+            <h6>Count: {{i}}</h6>
+            <h4>{{game.name}}</h4>
+            <p>{{game.summary}}</p>
+        </div>
+    </section>
+</div>
