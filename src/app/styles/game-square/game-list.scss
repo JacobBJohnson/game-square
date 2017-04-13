@@ -1,0 +1,45 @@
+.game-list-container{
+    display: flex;
+    flex-flow:column nowrap;
+    align-content: center;
+    flex-shrink: 0;
+    
+    & > section{
+        box-shadow: 0 0 8px rgba(19,32,26,.45);
+        padding:8px 12px;
+        border-radius:3px;
+        margin:4px;
+        flex:1;               
+
+        display: flex;
+
+        & > div{
+            padding:2px;            
+        }
+
+        & .logo{
+            border-radius: 3px;
+            box-shadow: 0 0 8px;            
+            margin-right:8px;
+        }
+
+        & .game-info{
+            overflow:hidden;
+            & > p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }        
+
+        & .fa-star{
+            color: #ffff00;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#ffa500;
+        }
+
+        & .fa-star-o{
+            color:#ccc;
+        }
+    }
+}
