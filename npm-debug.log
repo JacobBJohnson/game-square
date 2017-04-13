@@ -2,21 +2,21 @@
 1 verbose cli [ '/usr/local/Cellar/node/7.6.0/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'run',
-1 verbose cli   'tsc' ]
+1 verbose cli   'client' ]
 2 info using npm@4.1.2
 3 info using node@v7.6.0
-4 verbose run-script [ 'pretsc', 'tsc', 'posttsc' ]
-5 info lifecycle game-square@1.0.0~pretsc: game-square@1.0.0
-6 silly lifecycle game-square@1.0.0~pretsc: no script for pretsc, continuing
-7 info lifecycle game-square@1.0.0~tsc: game-square@1.0.0
-8 verbose lifecycle game-square@1.0.0~tsc: unsafe-perm in lifecycle true
-9 verbose lifecycle game-square@1.0.0~tsc: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jacobjohnson/repos/game-square/node_modules/.bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jacobjohnson/repos/game-square/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-10 verbose lifecycle game-square@1.0.0~tsc: CWD: /Users/jacobjohnson/repos/game-square
-11 silly lifecycle game-square@1.0.0~tsc: Args: [ '-c',
+4 verbose run-script [ 'preclient', 'client', 'postclient' ]
+5 info lifecycle game-square@1.0.0~preclient: game-square@1.0.0
+6 silly lifecycle game-square@1.0.0~preclient: no script for preclient, continuing
+7 info lifecycle game-square@1.0.0~client: game-square@1.0.0
+8 verbose lifecycle game-square@1.0.0~client: unsafe-perm in lifecycle true
+9 verbose lifecycle game-square@1.0.0~client: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jacobjohnson/repos/game-square/node_modules/.bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jacobjohnson/repos/game-square/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle game-square@1.0.0~client: CWD: /Users/jacobjohnson/repos/game-square
+11 silly lifecycle game-square@1.0.0~client: Args: [ '-c',
 11 silly lifecycle   'webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js' ]
-12 silly lifecycle game-square@1.0.0~tsc: Returned: code: 1  signal: null
-13 info lifecycle game-square@1.0.0~tsc: Failed to exec tsc script
-14 verbose stack Error: game-square@1.0.0 tsc: `webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js`
+12 silly lifecycle game-square@1.0.0~client: Returned: code: 1  signal: null
+13 info lifecycle game-square@1.0.0~client: Failed to exec client script
+14 verbose stack Error: game-square@1.0.0 client: `webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
@@ -29,13 +29,13 @@
 15 verbose pkgid game-square@1.0.0
 16 verbose cwd /Users/jacobjohnson/repos/game-square
 17 error Darwin 16.5.0
-18 error argv "/usr/local/Cellar/node/7.6.0/bin/node" "/usr/local/bin/npm" "run" "tsc"
+18 error argv "/usr/local/Cellar/node/7.6.0/bin/node" "/usr/local/bin/npm" "run" "client"
 19 error node v7.6.0
 20 error npm  v4.1.2
 21 error code ELIFECYCLE
-22 error game-square@1.0.0 tsc: `webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js`
+22 error game-square@1.0.0 client: `webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js`
 22 error Exit status 1
-23 error Failed at the game-square@1.0.0 tsc script 'webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js'.
+23 error Failed at the game-square@1.0.0 client script 'webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the game-square package,
 23 error not with npm itself.

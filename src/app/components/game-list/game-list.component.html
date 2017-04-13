@@ -1,12 +1,13 @@
 <div class="game-list-container">
     <section *ngFor="let game of games; let i=index">
-        <div class="logo">
-            <img [src]="game.cover?.url" width="120" height="120" [alt]="game.name">
+        <div class="logo">            
+            <img *ngIf="game.cover?.url" [src]="game.cover?.url" width="120" height="120" [alt]="game.name" />
+            <img *ngIf="!game.cover?.url" width="120" height="120" [alt]="game.name" />
         </div>
-        <div class="game-info">
-            <h6>Count: {{i}}</h6>
+        <div class="game-info">            
             <h4>{{game.name}}</h4>
-            <p>{{game.summary}}</p>
+            <p>{{game.summary}}</p>                      
+            <p><i *ngFor="let a of ratings; let i = index;" class="mrs fa fa-2x" [ngClass]="game.rating <= i? 'fa-star-o': 'fa-star'"></i></p>
         </div>
     </section>
 </div>

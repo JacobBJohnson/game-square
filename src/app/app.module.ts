@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import {Http, Response,Headers, RequestOptions, HttpModule} from '@angular/http'
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import {HeaderComponent} from './components/header/header.component';
 import {GameListComponent} from './components/game-list/game-list.component';
@@ -12,7 +13,8 @@ import {GameService} from './services/game.service';
 @NgModule({
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,

@@ -2,6 +2,7 @@ const express = require('express'),
     bodyParser = require('body-parser'),    
     morgan = require('morgan'),    
     router = require('./routes/router'),  
+    database = require('./config/database'),
     cors = require('cors'),      
     app = express(),
     port = 2700;
@@ -16,6 +17,7 @@ class Server {
     }
 
     start() {
+        database.open(()=>{});
         app.listen(port, (err) => {
             console.log('[%s] Listening on http://localhost:%d', process.env.NODE_ENV, port);
         });

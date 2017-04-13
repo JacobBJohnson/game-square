@@ -13,7 +13,8 @@ class GameRepository{
         //     if (err) {
         //         console.log(`*** GameRepository.getAll err: ${err}`);
         //         return callback(err);                
-        //     };            
+        //     };       
+        _.forEach(games,a=>a.rating = Math.round(Math.random()*5))+1;
              callback(null,games)  
         // });              
     }

@@ -6,8 +6,9 @@
     "client": "webpack-dev-server --inline --progress --colors --port 8080 --config  config/webpack.dev.js",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "server": "node server.js",
-    "start": "concurrently \"npm run client\" \"nodemon server.js\""    
+    "server": "nodemon server.js",
+    "start": "npm run client | npm run server"    ,
+    "stop": "killall -SIGINT game-square"
   },
   "repository": {
     "type": "git",
